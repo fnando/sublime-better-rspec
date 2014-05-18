@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+it { $0 }
+]]></content>
+  <tabTrigger>iti</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+  <description>it (implicit docstring)</description>
+</snippet>

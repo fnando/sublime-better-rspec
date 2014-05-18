@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+specify '${1:does something}' do
+  $0
+end
+]]></content>
+  <tabTrigger>specify</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+</snippet>

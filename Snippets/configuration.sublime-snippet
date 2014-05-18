@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+RSpec.configure do |config|
+  $0
+end
+]]></content>
+  <tabTrigger>config</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+</snippet>

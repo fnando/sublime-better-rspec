@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+expect(${1:subject}).to end_with($0)
+]]></content>
+  <tabTrigger>eew</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+  <description>expect(subject).to end_with</description>
+</snippet>

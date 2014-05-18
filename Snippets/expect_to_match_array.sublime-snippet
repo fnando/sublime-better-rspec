@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+expect(${1:array}).to match_array ${2:other_array}$0
+]]></content>
+  <tabTrigger>ema</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+  <description>expect(array).to match_array</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+expect(${1:subject}).not_to respond_to($0)
+]]></content>
+  <tabTrigger>enrt</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+  <description>expect(subject).not_to respond_to</description>
+</snippet>

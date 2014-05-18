@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+expect(${1:array}).to contain_exactly($0)
+]]></content>
+  <tabTrigger>ece</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+  <description>expect(array).to contain_exactly</description>
+</snippet>

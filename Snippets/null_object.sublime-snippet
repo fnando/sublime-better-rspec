@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+double('${1:name}').as_null_object
+]]></content>
+  <tabTrigger>no</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+  <description>double as null object</description>
+</snippet>

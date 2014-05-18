@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+expect(${1:subject}).to respond_to(${2:method})${3:.with(${4:arity}).arguments}
+]]></content>
+  <tabTrigger>ert</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+  <description>expect(subject).to respond_to</description>
+</snippet>

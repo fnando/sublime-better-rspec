@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+after do
+  $0
+end
+]]></content>
+  <tabTrigger>aft</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+  <description>after(&amp;block)</description>
+</snippet>

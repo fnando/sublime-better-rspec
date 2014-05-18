@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+expect(${1:subject}).to include($0)
+]]></content>
+  <tabTrigger>ei</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+  <description>expect(subject).to include</description>
+</snippet>

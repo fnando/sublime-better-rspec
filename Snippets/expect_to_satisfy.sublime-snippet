@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+expect(${1:subject}).to satisfy {|v| ${2:condition} }$0
+]]></content>
+  <tabTrigger>es</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+  <description>expect(subject).to satisfy</description>
+</snippet>

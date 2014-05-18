@@ -1,0 +1,3 @@
+[
+  {"keys": ["super+period"], "command": "rspec_toggle", "args": []}
+]

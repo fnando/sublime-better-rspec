@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[
+RSpec::Matchers.define :${1:matcher name} do |expected|
+  # diffable
+
+  match do |actual|
+
+  end
+
+  match_when_negated do |actual|
+
+  end
+
+  # chain :but_smaller_than do |second|
+  #   @second = second
+  # end
+
+  failure_message do |actual|
+
+  end
+
+  failure_message_when_negated do |actual|
+
+  end
+
+  description do
+
+  end
+end
+]]></content>
+  <tabTrigger>matcher</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+  <description>custom RSpec matcher</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+expect(${1:subject}).not_to match($0)
+]]></content>
+  <tabTrigger>enm</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+  <description>expect(subject).not_to match</description>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+  <content><![CDATA[
+include_context '${1:description}'
+]]></content>
+  <tabTrigger>ic</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+</snippet>

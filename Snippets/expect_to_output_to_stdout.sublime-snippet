@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+expect { ${1:action} }.to output(${2:message}).to_stdout
+]]></content>
+  <tabTrigger>eoo</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+  <description>expect(&amp;action).to output.to_stdout</description>
+</snippet>

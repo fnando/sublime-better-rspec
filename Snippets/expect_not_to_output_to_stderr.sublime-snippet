@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+expect { ${1:action} }.not_to output(${2:message}).to_stderr
+]]></content>
+  <tabTrigger>enoe</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+  <description>expect(&amp;action).not_to output.to_stderr</description>
+</snippet>

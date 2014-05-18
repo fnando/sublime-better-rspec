@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+scenario '${1:description}' do
+  $0
+end
+]]></content>
+  <tabTrigger>sce</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+</snippet>

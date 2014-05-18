@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+allow(${1:object}).to receive(${2:message}) { ${3:return value} }
+]]></content>
+  <tabTrigger>a</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+  <description>allow(object).to receive</description>
+</snippet>

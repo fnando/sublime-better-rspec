@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+expect {|block| ${1:method_call(&block)} }.not_to yield_with_args($0)
+]]></content>
+  <tabTrigger>eny</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+  <description>expect(&amp;action).not_to yield_with_args</description>
+</snippet>

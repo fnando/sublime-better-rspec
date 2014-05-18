@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+expect {|block| ${1:method_call(&block)} }.to yield_control
+]]></content>
+  <tabTrigger>ey</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+  <description>expect(&amp;action).to yield_control</description>
+</snippet>

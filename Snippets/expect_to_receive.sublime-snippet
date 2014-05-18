@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+expect(${1:subject}).to receive(${2:method call})${3:.with(${4:args})}$0
+]]></content>
+  <tabTrigger>er</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+  <description>expect(subject).to receive</description>
+</snippet>

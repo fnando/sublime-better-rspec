@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+expect(${1:subject}).to exist$0
+]]></content>
+  <tabTrigger>eex</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+  <description>expect(subject).to exist</description>
+</snippet>

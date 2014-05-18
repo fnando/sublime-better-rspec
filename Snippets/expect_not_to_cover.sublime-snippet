@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+expect(${1:subject}).not_to cover($0)
+]]></content>
+  <tabTrigger>enc</tabTrigger>
+  <scope>source.ruby.rspec</scope>
+  <description>expect(subject).not_to cover</description>
+</snippet>
