@@ -22,6 +22,10 @@ You can change it to whatever you by adding the following snippet to your Keybin
 }
 ```
 
+## Syntax Detection
+
+The best way of setting the syntax automatically is using the [ApplySyntax](https://sublime.wbond.net/packages/ApplySyntax) package. Just install it and you're done!
+
 ## License
 
 The MIT License (MIT)
