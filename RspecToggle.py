@@ -69,8 +69,17 @@ class RspecToggleCommand(sublime_plugin.WindowCommand):
         self.window.open_file(fullpath)
         break
 
+  def _is_rails(self, folder):
+    return os.path.isdir(os.path.join(folder, "app")) and \
+           os.path.isdir(os.path.join(folder, "config"))
+
   def _open_spec_file(self, folder, file):
-    base_path = re.sub(r"^(?:app|lib)\/(.*?)\.rb$", "spec/\\1_spec.rb", file)
+    if self._is_rails(folder):
+      regex = r"^(?:app\/)?(.*?)\.rb$"
+    else:
+      regex = r"^lib\/(.*?)\.rb$"
+
+    base_path = re.sub(regex, "spec/\\1_spec.rb", file)
     fullpath = os.path.join(folder, base_path)
 
     if os.path.isfile(fullpath):
