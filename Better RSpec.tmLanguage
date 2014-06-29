@@ -196,7 +196,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\b(expect|double|allow|let)\b</string>
+			<string>\b(expect|double|allow|let|expect_any_instance_of|allow_any_instance_of)\b</string>
 		</dict>
 
 		<key>subject</key>
