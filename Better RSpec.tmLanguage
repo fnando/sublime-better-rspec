@@ -224,7 +224,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\b(subject)(?!\s*[{(])\b</string>
+			<string>\b(subject|described_class)(?!\s*[{(])\b</string>
 		</dict>
 	</dict>
 
