@@ -122,7 +122,7 @@
 		<key>example</key>
 		<dict>
 			<key>begin</key>
-			<string>^\s*(it|specify|scenario|example)\b</string>
+			<string>^\s*(it|specify|scenario|example|xit)\b</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
