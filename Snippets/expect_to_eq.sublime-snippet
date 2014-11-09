@@ -4,5 +4,5 @@ expect(${1:subject}).to eq($0)
 ]]></content>
   <tabTrigger>ee</tabTrigger>
   <scope>source.ruby.rspec</scope>
-  <description>expect(subject).to eql(value)</description>
+  <description>expect(subject).to eq(value)</description>
 </snippet>
