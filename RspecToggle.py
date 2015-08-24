@@ -2,6 +2,9 @@ import sublime, sublime_plugin
 import re
 import os
 
+def log(message):
+  print("=> Better RSpec: %s" % (message))
+
 CREATE_IMPLEMENTATION_FILE_MESSAGE = """
 The implementation file doesn't exist.
 Do you want to create it?
@@ -14,6 +17,11 @@ Do you want to create it?
 
 SPEC_TEMPLATE = """\
 require 'spec_helper'
+
+"""
+
+RAILS_SPEC_TEMPLATE = """\
+require 'rails_helper'
 
 """
 
@@ -81,13 +89,19 @@ class RspecToggleCommand(sublime_plugin.WindowCommand):
 
     base_path = re.sub(regex, "spec/\\1_spec.rb", file)
     fullpath = os.path.join(folder, base_path)
+    rails_helper = os.path.join(folder, "spec/rails_helper.rb")
+
+    if os.path.isfile(rails_helper):
+      template = RAILS_SPEC_TEMPLATE
+    else:
+      template = SPEC_TEMPLATE
 
     if os.path.isfile(fullpath):
       self.window.open_file(fullpath)
     elif sublime.ok_cancel_dialog(CREATE_SPEC_FILE_MESSAGE):
       self._make_dir_for_path(fullpath)
       handler = open(fullpath, "w+")
-      handler.write(SPEC_TEMPLATE)
+      handler.write(template)
       handler.close()
       self.window.open_file(fullpath)
 
@@ -96,4 +110,3 @@ class RspecToggleCommand(sublime_plugin.WindowCommand):
 
     if not os.path.isdir(basedir):
       os.makedirs(basedir)
-
