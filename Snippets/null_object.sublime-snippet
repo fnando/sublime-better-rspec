@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-double('${1:name}').as_null_object
+double(${TM_QUOTE}${1:name}${TM_QUOTE}).as_null_object
 ]]></content>
   <tabTrigger>no</tabTrigger>
   <scope>source.ruby.rspec</scope>

@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-include_context '${1:description}'
+include_context ${TM_QUOTE}${1:description}${TM_QUOTE}
 ]]></content>
   <tabTrigger>ic</tabTrigger>
   <scope>source.ruby.rspec</scope>

@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-shared_examples '${1:description}' do
+shared_examples ${TM_QUOTE}${1:description}${TM_QUOTE} do
   $0
 end
 ]]></content>

@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-scenario '${1:description}' do
+scenario ${TM_QUOTE}${1:description}${TM_QUOTE} do
   $0
 end
 ]]></content>

@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-it '${1:does something}' do
+it ${TM_QUOTE}${1:does something}${TM_QUOTE} do
   $0
 end
 ]]></content>

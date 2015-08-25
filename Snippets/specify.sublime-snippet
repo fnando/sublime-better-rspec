@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-specify '${1:does something}' do
+specify ${TM_QUOTE}${1:does something}${TM_QUOTE} do
   $0
 end
 ]]></content>
