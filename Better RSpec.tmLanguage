@@ -74,6 +74,10 @@
     </dict>
     <dict>
       <key>include</key>
+      <string>#let</string>
+    </dict>
+    <dict>
+      <key>include</key>
       <string>#subject</string>
     </dict>
     <dict>
@@ -196,7 +200,21 @@
         </dict>
       </dict>
       <key>match</key>
-      <string>\b(expect|double|allow|let|expect_any_instance_of|allow_any_instance_of|is_expected)\b</string>
+      <string>\b(expect|double|allow|expect_any_instance_of|allow_any_instance_of|is_expected)\b</string>
+    </dict>
+
+    <key>let</key>
+    <dict>
+      <key>captures</key>
+      <dict>
+        <key>1</key>
+        <dict>
+          <key>name</key>
+          <string>keyword.other.rspec</string>
+        </dict>
+      </dict>
+      <key>match</key>
+      <string>\b(let!?)(?:\s*\()</string>
     </dict>
 
     <key>subject</key>
