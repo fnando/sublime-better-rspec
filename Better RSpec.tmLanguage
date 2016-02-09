@@ -173,7 +173,9 @@
     </dict>
     <key>single-line-example</key>
     <dict>
-      <key>captures</key>
+      <key>begin</key>
+      <string>^\s*(it|its|specify|scenario|example|xit)\b</string>
+      <key>beginCaptures</key>
       <dict>
         <key>1</key>
         <dict>
@@ -181,10 +183,18 @@
           <string>keyword.other.rspec.example</string>
         </dict>
       </dict>
-      <key>match</key>
-      <string>^\s*(it|its|specify|scenario|example)\s*{</string>
+      <key>end</key>
+      <string>{</string>
+      <key>name</key>
+      <string>meta.rspec.example</string>
+      <key>patterns</key>
+      <array>
+        <dict>
+          <key>include</key>
+          <string>source.ruby</string>
+        </dict>
+      </array>
     </dict>
-
     <key>other</key>
     <dict>
       <key>captures</key>
