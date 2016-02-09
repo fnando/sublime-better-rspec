@@ -58,10 +58,6 @@
     </dict>
     <dict>
       <key>include</key>
-      <string>#single-line-example</string>
-    </dict>
-    <dict>
-      <key>include</key>
       <string>#pending</string>
     </dict>
     <dict>
@@ -132,7 +128,7 @@
         </dict>
       </dict>
       <key>end</key>
-      <string>\b(do)\s*$</string>
+      <string>\b(do)\s*$|{</string>
       <key>endCaptures</key>
       <dict>
         <key>1</key>
@@ -167,24 +163,10 @@
         </dict>
       </dict>
       <key>match</key>
-      <string>^\s*(it|its|specify|scenario|example)\s+(.*\S)(?&lt;!do)\s*$</string>
+      <string>^\s*(it|its|specify|scenario|example)\s+(.*\S)(?&lt;!do|})\s*$</string>
       <key>name</key>
       <string>meta.rspec.pending</string>
     </dict>
-    <key>single-line-example</key>
-    <dict>
-      <key>captures</key>
-      <dict>
-        <key>1</key>
-        <dict>
-          <key>name</key>
-          <string>keyword.other.rspec.example</string>
-        </dict>
-      </dict>
-      <key>match</key>
-      <string>^\s*(it|its|specify|scenario|example)\s*{</string>
-    </dict>
-
     <key>other</key>
     <dict>
       <key>captures</key>
