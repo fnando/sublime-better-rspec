@@ -2,6 +2,17 @@
 
 Better RSpec syntax highlighting, with matchers for v3. Also includes implementation/spec toggling command.
 
+## Installation
+
+### Setup Package Control Repository
+
+1. Follow the instructions from https://sublime.fnando.com.
+2. Open the command pallete, run “Package Control: Install Package“, then search for “Better RSpec“.
+
+### Git Clone
+
+Clone this repository into the Sublime Text “Packages” directory, which is located where ever the “Preferences” -> “Browse Packages” option in sublime takes you.
+
 ## Toggling between implementation/spec
 
 The default binding is `super-period`.
