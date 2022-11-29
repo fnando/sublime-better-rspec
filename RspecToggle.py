@@ -1,6 +1,7 @@
 import sublime, sublime_plugin
 import re
 import os
+from pathlib import Path
 
 def log(message):
   print("=> Better RSpec: %s" % (message))
@@ -87,7 +88,7 @@ class RspecToggleCommand(sublime_plugin.WindowCommand):
     else:
       regex = r"^lib\/(.*?)\.rb$"
 
-    base_path = re.sub(regex, "spec/\\1_spec.rb", file)
+    base_path = re.sub(regex, "spec/**/\\1_spec.rb", file)
     fullpath = os.path.join(folder, base_path)
     rails_helper = os.path.join(folder, "spec/rails_helper.rb")
 
@@ -95,6 +96,17 @@ class RspecToggleCommand(sublime_plugin.WindowCommand):
       template = RAILS_SPEC_TEMPLATE
     else:
       template = SPEC_TEMPLATE
+
+    self._print_debug("base_path: %s" % base_path)
+    files = self._get_filepaths_with_glob(folder, base_path)
+
+    if len(files) > 0:
+      for file in files:
+        self._print_debug("found file: %s" % file)
+        self._print_debug('Returning just one. We could support multiple though.')
+      fullpath = str(files[0])
+    else:
+      self._print_debug('Nothing found!')
 
     if os.path.isfile(fullpath):
       self.window.open_file(fullpath)
@@ -110,3 +122,16 @@ class RspecToggleCommand(sublime_plugin.WindowCommand):
 
     if not os.path.isdir(basedir):
       os.makedirs(basedir)
+
+  def _print_debug(self, *msg):
+    if self._get_setting(sublime.active_window().active_view(), sublime.load_settings('sublime-better-rspec.sublime-settings'), "debug", False):
+      print(msg)
+
+  def _get_filepaths_with_glob(self, root_path: str, file_regex: str):
+    self._print_debug("searching in: %s" % root_path)
+    self._print_debug("searching for: %s" % file_regex)
+    return list(Path(root_path).rglob(file_regex))
+
+  def _get_setting(self, view, settings, key, default):
+    local = 'sublime-better-rspec.' + key
+    return view.settings().get( local, settings.get( key, default ) )
