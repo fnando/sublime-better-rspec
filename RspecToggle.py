@@ -124,7 +124,7 @@ class RspecToggleCommand(sublime_plugin.WindowCommand):
       os.makedirs(basedir)
 
   def _print_debug(self, *msg):
-    if self._get_setting(sublime.active_window().active_view(), sublime.load_settings('sublime-better-rspec.sublime-settings'), "debug", False):
+    if self._get_setting(sublime.active_window().active_view(), sublime.load_settings('better-rspec.sublime-settings'), "debug", False):
       print(msg)
 
   def _get_filepaths_with_glob(self, root_path: str, file_regex: str):
