@@ -17,6 +17,7 @@ contexts:
     - include: pending
     - include: example
     - include: other
+    - include: expectation
     - include: subject
     - include: subject-variable
     # include from Ruby.sublime-syntax:
@@ -44,8 +45,14 @@ contexts:
             1: keyword.control.ruby.start-block
           pop: true
         - include: expressions
+
+  expectation:
+    - match: '\.(to|not_to)\s*((contain|include|be)_?[^\s\(]*|eql?|raise_error|have_http_status)'
+      captures:
+        1: keyword.other.rspec.expectation
+        2: keyword.other.rspec.expectation
   other:
-    - match: \b(expect|double|allow|let|expect_any_instance_of|allow_any_instance_of|is_expected)\b
+    - match: \b(expect|double|allow|let|expect_any_instance_of|allow_any_instance_of|is_expected|create|build)\b
       captures:
         1: keyword.other.rspec
   pending:
