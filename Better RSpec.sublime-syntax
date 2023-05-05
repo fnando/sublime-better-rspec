@@ -49,7 +49,7 @@ contexts:
       captures:
         1: keyword.other.rspec
   pending:
-    - match: ^\s*(it|its|specify|scenario|example)\s+(.*\S)(?<!do)\s*$
+    - match: ^\s*(it|its|specify|scenario|example|include_context)\s+(.*\S)(?<!do)\s*$
       scope: meta.rspec.pending
       captures:
         1: keyword.other.rspec.pending
