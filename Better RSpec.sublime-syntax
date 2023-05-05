@@ -5,6 +5,9 @@ name: Better RSpec
 file_extensions:
   - spec.rb
 scope: source.ruby.rspec
+
+extends: Packages/Ruby/Ruby.sublime-syntax
+
 contexts:
   main:
     - match: '(?<!\.)\b(before|after|around|shared_examples|shared_context|it_behaves_like|include_examples|it_should_behave_like|it_has_behavior)\b(?![?!])'
@@ -16,7 +19,9 @@ contexts:
     - include: other
     - include: subject
     - include: subject-variable
-    - include: scope:source.ruby
+    # include from Ruby.sublime-syntax:
+    - include: expressions
+
   behaviour:
     - match: ^\s*(describe|context|feature)\b
       captures:
@@ -27,7 +32,7 @@ contexts:
           captures:
             1: keyword.control.ruby.start-block
           pop: true
-        - include: scope:source.ruby
+        - include: expressions
   example:
     - match: ^\s*(it|its|specify|scenario|example|xit)\b
       captures:
@@ -38,7 +43,7 @@ contexts:
           captures:
             1: keyword.control.ruby.start-block
           pop: true
-        - include: scope:source.ruby
+        - include: expressions
   other:
     - match: \b(expect|double|allow|let|expect_any_instance_of|allow_any_instance_of|is_expected)\b
       captures:
