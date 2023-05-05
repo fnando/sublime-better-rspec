@@ -1,0 +1,63 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/syntax.html
+name: Better RSpec
+file_extensions:
+  - spec.rb
+scope: source.ruby.rspec
+contexts:
+  main:
+    - match: '(?<!\.)\b(before|after|around|shared_examples|shared_context|it_behaves_like|include_examples|it_should_behave_like|it_has_behavior)\b(?![?!])'
+      scope: keyword.other.rspec
+    - include: behaviour
+    - include: single-line-example
+    - include: pending
+    - include: example
+    - include: other
+    - include: subject
+    - include: subject-variable
+    - include: scope:source.ruby
+  behaviour:
+    - match: ^\s*(describe|context|feature)\b
+      captures:
+        1: keyword.other.rspec.behaviour
+      push:
+        - meta_scope: meta.rspec.behaviour
+        - match: \b(do)\s*$
+          captures:
+            1: keyword.control.ruby.start-block
+          pop: true
+        - include: scope:source.ruby
+  example:
+    - match: ^\s*(it|its|specify|scenario|example|xit)\b
+      captures:
+        1: keyword.other.rspec.example
+      push:
+        - meta_scope: meta.rspec.example
+        - match: \b(do)\s*$
+          captures:
+            1: keyword.control.ruby.start-block
+          pop: true
+        - include: scope:source.ruby
+  other:
+    - match: \b(expect|double|allow|let|expect_any_instance_of|allow_any_instance_of|is_expected)\b
+      captures:
+        1: keyword.other.rspec
+  pending:
+    - match: ^\s*(it|its|specify|scenario|example)\s+(.*\S)(?<!do)\s*$
+      scope: meta.rspec.pending
+      captures:
+        1: keyword.other.rspec.pending
+        2: string.ruby
+  single-line-example:
+    - match: '^\s*(it|its|specify|scenario|example)\s*{'
+      captures:
+        1: keyword.other.rspec.example
+  subject:
+    - match: '\b(subject!?)(?:\s*[({])'
+      captures:
+        1: keyword.other.rspec
+  subject-variable:
+    - match: '\b(subject|described_class)(?!\s*[{(])\b'
+      captures:
+        1: variable.other.rspec
